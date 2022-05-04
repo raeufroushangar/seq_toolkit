@@ -2,8 +2,6 @@
 # Dependences:
 import os
 
-
-####################################################################################################
 """
 Discription:
 ------------
@@ -49,7 +47,6 @@ def chromosomeCount ():
                 print("path not found. Please retry.\n") # print if path is not found
                 continue
             break
-####################################################################################################
 
 
 if __name__ == '__main__':
