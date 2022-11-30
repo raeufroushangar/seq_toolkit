@@ -2,20 +2,15 @@
 # Dependences:
 import os
 
-"""
-Discription:
-------------
-This function reads the '.genome' file and count number of sequenced chromosomes.
 
-Inputes:
---------
-1: Path of parent directory where all "sequenced" subdirectories are located.
-"""
 
-def chromosomeCount ():
-
+def chromosomeCounterFunc():
+    """
+    -Input:
+         1: Path of parent directory where all "sequenced" subdirectories are located.
+    -Functionality: Read the '.genome' file and count number of sequenced chromosomes.
+    """
     print("""\n--set parant directory where sequence directories are located--\n""")
-
     while True:
         usr_dir_input = input("enter path of working directory: ") # ask user ot enter path
         if usr_dir_input == "0":
@@ -50,4 +45,4 @@ def chromosomeCount ():
 
 
 if __name__ == '__main__':
-    chromosomeCount()
+    chromosomeCounterFunc()

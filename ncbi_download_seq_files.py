@@ -6,11 +6,13 @@ from Bio import SeqIO
 #email used to access NCBI-GEO
 en.email = "bioinfo@gmail.com"
 
-"""
-   Downloading sequences fasta files from NCBI-Nucleotide for multiple sequence alignment.
-"""
 
-def ncbi_download (arg):
+
+def ncbiFastaFilesDownloaderFunc (arg):
+      """
+      -Functionality: Downloading sequences fasta files from NCBI-Nucleotide for multiple sequence 
+                      alignment.
+      """
       for gene_symbol, gene_id in arg.items():
             ncbi_handle = en.efetch(db= 'nucleotide', id= gene_id, rettype='fasta')
             record = SeqIO.read(ncbi_handle, 'fasta')
@@ -31,4 +33,4 @@ dict={'G3QWX4':'SRLZ01002358.1',
       'Q5RFN1':'NDHI03003400.1'}
 
 if __name__ == '__main__':
-    ncbi_download(dict)
+    ncbiFastaFilesDownloaderFunc(dict)
