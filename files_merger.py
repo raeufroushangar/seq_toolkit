@@ -3,6 +3,8 @@ import os
 
 def fileMergerFunc (dirList, outputFile):
     """
+    -Input: 
+         1: list of fasta files names
     -Functionality: Merge multiple files into single file.
     """
     data = ""
@@ -15,7 +17,5 @@ def fileMergerFunc (dirList, outputFile):
                 f2.write("\n")
 
 
-
 if __name__ == '__main__':
-    fileMergerFunc(os.listdir(),"merged_fasta_files.fasta")
-
+    fileMergerFunc(os.listdir(),"muscle_input.fasta")
